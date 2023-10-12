@@ -1,0 +1,269 @@
+.container2 {
+  display: grid;
+  background-color: #ecf6f4;
+  height: 1100px;
+  padding: 10px;
+  margin: 50px;
+  text-align: center;
+  place-items: center;
+}
+
+.container2 > div:nth-child(odd) {
+  background-color: #86c5e0;
+}
+
+.wrapper {
+  background-color: #ecf6f4;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: end;
+  grid-auto-rows: 300px;
+  padding-top: 40px;
+  height: 400px;
+  width: 100%;
+}
+
+.img1:hover {
+  width: 380px;
+  height: 320px;
+}
+
+img:hover {
+  border: solid 20px #86c5e0;
+}
+
+.itemheader {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: large;
+  width: 100%;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.itemone {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: larger;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  .row, .navbar {
+    flex-direction: column;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*=col-] {
+  float: left;
+  padding: 15px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.welcome {
+  display: block;
+  margin-left: 500px;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+html {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #f39804;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  background-color: #333;
+}
+
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  margin-left: 500px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+  margin-left: 400px;
+}
+
+.footer {
+  padding: 50px;
+  text-align: center;
+  background: #afe0a0;
+}
+
+@media screen and (max-width: 700px) {
+  .row, .navbar {
+    flex-direction: column;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container > div:nth-child(odd) {
+  background-color: #86c5e0;
+}
+
+.container1 {
+  background-color: rgb(246, 247, 242);
+  padding: 10px;
+  margin: 50px;
+  text-align: center;
+  display: flex;
+  height: 600px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.item1 {
+  background-color: rgb(36, 197, 225);
+  color: black;
+  padding: 5px;
+}
+
+html {
+  background: linear-gradient(to bottom, #eef0f1, #e9ceab);
+  display: flex;
+}
+
+body {
+  width: 100%;
+  margin: auto;
+}
+
+.option-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 500px;
+  height: 200px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.option {
+  flex-grow: 1;
+  display: block;
+  padding: 0.5em;
+  background: #FFF;
+  border-radius: 0.25em;
+  font-size: 4rem;
+  position: relative;
+  margin: 0.1em;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  cursor: pointer;
+  opacity: 0.5;
+  transition-duration: 0.8s, 0.6s;
+  transition-property: flex-grow, opacity;
+  transition-timing-function: cubic-bezier(0.98, 0, 0.22, 0.98), ease-in-out;
+}
+.option:before, .option:after {
+  content: "";
+  display: block;
+  border: solid 2px #09caf1;
+  visibility: visible;
+}
+.option:before {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  border-radius: 50%;
+  width: 0.25em;
+  height: 0.25em;
+}
+.option:after {
+  width: 100%;
+  transform-origin: 0 0;
+  transition: inherit;
+  transition-property: transform, opacity;
+}
+
+.option-input {
+  position: absolute;
+  opacity: 0;
+}
+
+.option__label {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: bold;
+  transform-origin: left bottom;
+  transform: scale(0.7);
+  transition: inherit;
+  transition-property: transform, opacity;
+}
+.option__label sub {
+  margin-left: 0.25em;
+  font-size: 0.4em;
+  display: inline-block;
+  vertical-align: 0.1em;
+}
+
+.option-input:focus + .option {
+  opacity: 1;
+}
+
+.option-input:checked + .option {
+  flex-grow: 4;
+  opacity: 1;
+}
+.option-input:checked + .option::before {
+  background: #64D6EE;
+}
+.option-input:checked + .option .option__label {
+  transform: scale(1);
+}/*# sourceMappingURL=main.css.map */

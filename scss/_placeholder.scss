@@ -1,0 +1,14 @@
+@mixin cop-row($name, $top-op, $bottom-op) {
+    .option-#{$name} {
+      display: flex; 
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 500px;
+  height: 200px;
+  margin: auto;
+  #{$top-op}: 100px;
+  #{$bottom-op}: 100px;
+  position: relative;
+    }
+  }
